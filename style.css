@@ -167,6 +167,8 @@ right: 200px;
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease-in-out;
     border-radius: 50%; /* Added border-radius */
+    position: relative;
+    right: 100px;
 }
 .social-icons a:hover{
     color: white;
