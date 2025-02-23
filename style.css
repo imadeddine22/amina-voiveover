@@ -471,8 +471,8 @@ h2 {
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     box-shadow: 0 0 12px rgba(255, 102, 153, 0.3);
     margin-left: 200px;
-    position:relative;
-    left:240px;
+    position: relative;
+    left: 240px;
 }
 
 .contact .btn:hover {
