@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Amina Voice over</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div class="container">
+    <a href="#home" class="logo">Amina <span>Voice Over</span></a>
+    <i class='bx bx-menu' id="menu-icons"></i>
+    
+
+   <div class="navbar">
+        <a href="#home" >HOME</a>
+        <a href="#services" >SERVICES</a>
+     <a href="#contact" >CONTACT</a>
+      <a href="#about" >ABOUT US</a>
+</div>
+</div>
+
+<section class="home" id="home">
+<div class="home-content">
+    <h1>Hi Its <span>Amina</span></h1>
+    <h3 class="text-animation"></h3>
+    <p>
+ <bold>HI,Im</bold> Amina, a passionate and professional voice-over artist from Algeria! With a warm, engaging, and versatile voice,
+    I bring scripts to life with clarity and emotion. Whether you need a commercial, narration, IVR, e-learning, or
+    promotional voice-over, I deliver high-quality recordings tailored to your needs.
+    
+     Clear & expressive delivery
+     Fast turnaround & professional quality
+     Arabic, French & English fluency
+    
+     Lets give your brand a powerful voice! Contact me now to bring your project to life.</p>
+<div class="social-icons">
+<a href="#"><i class='bx bxl-instagram-alt'></i></a>
+<a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+</div>
+
+<div class="bnt-group">
+    <a href="#home" class="btn">Hire</a>
+    <a href="#contact" class="btn">contact</a>
+</div>
+
+<div class="home-image"><img src="mimi.png" alt=""></div>
+
+</div>
+</section>
+<br>
+<section id="services" class="services">
+    <div class="heading"><h2>SERVICES</h2></div>
+    <div class="services-box">
+        <div class="services-container">
+            <h4>My Portfolio</h4>
+            <div class="video-gallery">
+                <video controls id="current-video">
+                    <video controls>
+                    <source src="a.mp4" type="video/mp4">
+                </video>
+                    <video controls>
+                    <source src="b.mp4" type="video/mp4">
+                </video>
+                    <video controls>
+                    <source src="c.mp4" type="video/mp4">
+                </video>
+                    <video controls>
+                    <source src="d.mp4" type="video/mp4">
+                </video>
+                    <video controls>
+                    <source src="e.mp4" type="video/mp4">
+                </video>
+                </video>
+                <div class="video-controls">
+                    <button id="prev-btn">Back</button>
+                    <button id="next-btn">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const videos = [
+            'a.mp4',
+            'b.mp4',
+            'c.mp4',
+            'd.mp4',
+            'e.mp4'
+        ];
+        let currentIndex = 0;
+        const videoElement = document.getElementById('current-video');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        function updateVideo(index) {
+            videoElement.src = videos[index];
+            videoElement.load();
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateVideo(currentIndex);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < videos.length - 1) {
+                currentIndex++;
+                updateVideo(currentIndex);
+            }
+        });
+
+        updateVideo(currentIndex);
+    });
+</script>
+
+
+
+<section class="contact" id="contact">
+    <div class="contact-container">
+        <h2 class="section-title">Get in <span>Touch</span></h2>
+        <p class="section-subtitle">Feel free to reach out for collaborations or just a friendly chat.</p>
+        
+        <div class="contact-content">
+            <form action="mailto:aminaasnouni@gmail.com" method="post" enctype="text/plain" class="contact-form">
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Your Email" value="aminaasnouni@gmail.com" required>
+            </div>
+            <div class="input-group">
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+            </form>
+            
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="about-container">
+        <h2 class="section-title">About <span>Us</span></h2>
+        <p class="section-subtitle">Discover of amina voice-over artistry.</p>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <p> I’m Amina, a professional voice-over artist from Algeria, bringing words to life with clarity, emotion, and impact.
+                
+                With years of experience in the industry, I specialize in delivering high-quality voiceovers for commercials,
+                documentaries, e-learning, audiobooks, corporate narrations, and more. My voice is versatile, expressive, and adaptable
+                to various tones and styles, ensuring that your message is delivered with authenticity and professionalism.</p>
+                <p>I take pride in providing crisp, studio-quality recordings with attention to detail, bringing a unique touch to every
+                project. Whether you need a warm and engaging narration, a powerful and authoritative voice, or a friendly and
+                conversational tone, I can tailor my delivery to perfectly match your vision.</p>
+                <p>Join us on this exciting journey and let us help you create unforgettable audio experiences that resonate with audiences across the globe.</p>
+            </div>
+            <div class="about-image">
+                <img src="oooo.jpeg" alt="Voice Over">
+            </div>
+        </div>
+    </div>
+</section>
+<br><br><br>
+
+
+
+
+<script src="scrpt.js"></script>
+</body>
+</html>
