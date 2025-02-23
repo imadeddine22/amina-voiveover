@@ -114,9 +114,6 @@ margin-top: 13rem;
 span{
     color: var(--main-color);
 }
-.logo span{
-    color: var(--main-color);
-}
 .home-content h1{
     font-size: 7rem;
     font-weight: 700;
@@ -167,8 +164,8 @@ right: 200px;
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease-in-out;
     border-radius: 50%; /* Added border-radius */
-    position: relative;
-    right: 100px;
+  position: relative;
+  right: 10px;
 }
 .social-icons a:hover{
     color: white;
@@ -192,7 +189,7 @@ right: 200px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
    margin-left: 20px;
    position: relative;
-   right: 50px;
+   right: 80px;
 }
 
 .btn:hover {
@@ -206,25 +203,20 @@ right: 200px;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+ 
 }
-
 .btn-group a:nth-of-type(2) {
     background-color: black;
     color: white;
     box-shadow: 0 0 25px transparent;
+   
 }
 
 .btn-group a:nth-of-type(2):hover {
     background-color: #333;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
 }
-.text-animation {
-    font-size: 34px;
-    font-weight: 600;
-    min-width: 280px;
-    position: relative;
-    display: inline-block;
-}
+/* Removed duplicate .text-animation rule */
 
 .text-animation {
     font-size: 34px;
@@ -472,7 +464,6 @@ h2 {
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     box-shadow: 0 0 12px rgba(255, 102, 153, 0.3);
-    margin-left: 200px;
     position: relative;
     left: 240px;
 }
@@ -632,7 +623,7 @@ h2 {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
     html {
         font-size: 50%;
     }
@@ -680,11 +671,7 @@ h2 {
         flex-direction: row;
         gap: 1rem;
     }
-    .social-icons{
-       position: relative;
-       left: 0px;
-    }
-
+    
     .services-box,
     .services-container {
         width: 90%;
@@ -698,18 +685,23 @@ h2 {
         flex-direction: column;
         gap: 1rem;
     }
-#prev-btn{
-    left: 0;
-    width: 20px;
-    text-align: center;
-}
-#next-btn{
-    position: relative;
-    left: 230px;
-    width: 20px;
-    bottom: 35px;
-   text-align: center;
-}
+
+    #menu-icons {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #menu-icons.active + .navbar {
+        display: flex;
+    }
+
     .about-content {
         flex-direction: column;
         align-items: center;
@@ -724,63 +716,56 @@ h2 {
         width: 80%;
     }
 
-    #menu-icons {
+    /* Hover and Animation Effects */
+    .navbar a:hover {
+        color: var(--main-color);
+        border-bottom: 3px solid var(--main-color);
+        transform: scale(1.1);
+    }
+
+    .home-image img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px var(--main-color), 0 0 30px var(--main-color), 0 0 30px var(--main-color);
+    }
+
+    .contact .btn {
+        background-color: var(--main-color);
+        color: white;
+        border: none;
+        font-size: 1.2rem;
+        font-weight: 500;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        box-shadow: 0 0 12px rgba(255, 102, 153, 0.3);
         display: block;
+        width: 100px;
+        margin-left: -150px;
     }
 
-    .navbar {
-        display: none;
+    .btn:hover {
+        background-color: var(--main-color);
+        transform: translateY(-3px);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
     }
-}
 
-/* Hover and Animation Effects */
-.navbar a:hover {
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
-    transform: scale(1.1);
-}
+    .social-icons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 2rem;
+        position: relative;
+        left: 110px;
+    }
 
-.home-image img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px var(--main-color), 0 0 30px var(--main-color), 0 0 30px var(--main-color);
-}
-.contact .btn {
-    background-color: var(--main-color);
-    color: white;
-    border: none;
-    
-    font-size: 1.2rem;
-    font-weight: 500;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 0 12px rgba(255, 102, 153, 0.3);
-    margin: 0 auto;
-    display: block;
-   width: 100px;
-  margin-left: -155px;
-}
+    .services-container:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    }
 
-.btn:hover {
-    background-color: var(--main-color);
-    transform: translateY(-3px);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-}
-.social-icons{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
-   position: relative;
-   left: 180px;
-}
-.services-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-}
-
-.about-image img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px var(--neon-glow);
+    .about-image img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px var(--neon-glow);
+    }
 }
